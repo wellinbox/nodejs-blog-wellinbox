@@ -1,0 +1,13 @@
+<% include('layout') %>
+<h2>โพสต์ทั้งหมด</h2>
+<% if (posts && posts.length > 0) { %>
+  <% posts.forEach(post => { %>
+    <article>
+      <h3><a href="/<%= post._id %>"><%= post.title %></a></h3>
+      <small><%= post.createdAt.toLocaleDateString('th-TH') %></small>
+      <p><%= post.content.substring(0, 100) %>...</p>
+    </article>
+  <% }) %>
+<% } else { %>
+  <p>ยังไม่มีโพสต์ใดๆ</p>
+<% } %>

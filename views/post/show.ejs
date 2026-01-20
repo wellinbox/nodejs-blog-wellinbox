@@ -1,0 +1,7 @@
+<% include('../layout') %>
+<article>
+  <h1><%= post.title %></h1>
+  <small><%= post.createdAt.toLocaleDateString('th-TH') %></small>
+  <p><%= post.content %></p>
+</article>
+<a href="/">กลับหน้าหลัก</a>
